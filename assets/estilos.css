@@ -1,0 +1,193 @@
+*{
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+    font: arial;
+}
+
+/* ---------------------------------ESTILOS SECCIONES */
+
+header{
+grid-area: header;
+background-color: rgb(211, 8, 8);
+}
+
+main{
+grid-area: main;
+background-color: rgb(51, 34, 148);
+overflow: auto;
+}
+
+aside{
+grid-area: aside;
+background-color: azure;
+
+
+
+}
+
+
+
+footer{
+grid-area: footer;
+background-color: beige;
+}
+
+/* ---------------------------------CLASES LAYOUT Y GRID */
+
+/* .layout-container{
+    display: grid;
+    grid-template-areas: 
+    "aside header"
+    "aside main"
+    "aside footer";
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-columns: 10vw 90vw;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: 10px;
+    background-color: cadetblue;
+} */
+
+/* ---------------------------------ADAPTACIONES MEDIA */
+
+/* CCEELLUU */
+@media (max-width: 576px) {
+
+.layout-container{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer";
+    grid-template-rows: 10vh 5vh 80vh 5vh;
+    grid-template-columns: 100vw;
+    
+}
+
+/* .grid-container {
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  gap: 50px;
+  justify-content: center;
+  background-color: rgb(60, 156, 47);
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 👈 se adapta al espacio disponible */
+  gap: 30px; /* Espaciado entre cards */
+  padding: 40px; /* Margen interior general */
+  justify-items: center; /* Centra las cards horizontalmente */
+  box-sizing: border-box;
+  /* background-color: ; o el color que tú uses */
+}
+
+}
+
+/* WWEEBB */
+@media (min-width: 576px) {
+
+.layout-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer main";
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns: 20vw 80vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3, 1fr)); /* 👈 se adapta al espacio disponible */
+  gap: 30px; /* Espaciado entre cards */
+  padding: 40px; /* Margen interior general */
+  justify-items: center; /* Centra las cards horizontalmente */
+  box-sizing: border-box;
+  background-color: rgb(60, 156, 47); /* o el color que tú uses */
+}
+
+}
+/* tablet */
+@media (min-width: 576px) and (max-width: 992px) {
+
+.layout-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "footer footer";
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns: 20vw 80vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3, 1fr)); /* 👈 se adapta al espacio disponible */
+  gap: 30px; /* Espaciado entre cards */
+  padding: 40px; /* Margen interior general */
+  justify-items: center; /* Centra las cards horizontalmente */
+  box-sizing: border-box;
+  background-color: rgb(60, 156, 47); /* o el color que tú uses */
+}
+
+
+
+/* .card {
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(94, 58, 58);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+
+.custom-card {
+  border: 2px solid rgb(255, 0, 0);
+  background-color: #978a46;
+  transition: box-shadow 0.3s ease;
+} */
+
+/* .custom-card:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+} */
+
+}
+
+
+----------------
+
+.card.custom-card {
+  --bs-card-bg: #97b846 !important;
+}
+
+.imgsize{
+height: auto; width:50%;
+}
+
+.card-img-container {
+  width: 100%;
+  height: 300px; /* puedes ajustar este alto */
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.card-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Esto evita deformación y mantiene proporciones */
+}
