@@ -1,6 +1,7 @@
 # SkateShop Responsive E-commerce
 
 Responsive e-commerce interface developed as part of a Desafío Latam front-end challenge.
+Link: https://mfuentespagliero.github.io/DesafioLatam-SkateShop/
 
 ## Goals
 
